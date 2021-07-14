@@ -8,4 +8,5 @@ cd web
 sudo docker build -t valikwebserver .
 sudo docker image ls
 pwd
+sudo docker ps | awk NR\ ==\ 2\{print\ \$1\} |sudo xargs docker stop
 sudo docker run -d -p 80:80 valikwebserver:latest
