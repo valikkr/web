@@ -1,7 +1,7 @@
-FROM centos:latest
+FROM ubuntu:latest
 MAINTAINER NewstarCorporation
-RUN yum -y install httpd
+RUN apt -y install apache2
 COPY index.html /var/www/html/
-RUN service httpd start
+RUN service apache2 start
 #CMD[“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 EXPOSE 80
