@@ -8,4 +8,4 @@ cd web
 sudo docker build -t valikwebserver .
 sudo docker image ls
 pwd
-sudo docker run -p 80:80 valikwebserver:latest
+sudo docker run -d -p 80:80 valikwebserver:latest
