@@ -1,4 +1,6 @@
 FROM ubuntu:latest
+ENV TZ=Europe/Kiev
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 MAINTAINER NewstarCorporation
 RUN apt-get -y update
 RUN apt-get -y install apache2
