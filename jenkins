@@ -1,0 +1,11 @@
+sudo rm -rf /test
+sudo mkdir /test
+cd /test
+sudo git init
+sudo git clone https://github.com/valikkr/web.git
+ls
+cd web
+sudo docker build -t valikwebserver .
+sudo docker image ls
+pwd
+sudo docker run -p 80:80 valikwebserver:latest
