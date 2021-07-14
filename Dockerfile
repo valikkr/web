@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 MAINTAINER NewstarCorporation
+RUN apt-get -y update
 RUN apt-get -y install apache2
 COPY index.html /var/www/html/
 RUN service apache2 start
