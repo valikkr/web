@@ -1,6 +1,8 @@
 sudo rm -rf /test
 sudo mkdir /test
 cd /test
+sudo systemctl stop docker
+sudo systemctl start docker
 sudo git init
 sudo git clone https://github.com/valikkr/web.git
 ls
